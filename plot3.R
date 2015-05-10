@@ -11,7 +11,8 @@ hpc$Date.Time <- strptime(hpc$Date.Time, "%Y-%m-%d %H:%M:%S")
 
 png(filename = "plot3.png",
     width = 480, 
-    height = 480 
+    height = 480,
+    bg = "transparent"  
 )
 
 with(hpc, plot(Date.Time, Sub_metering_1, type = "l", xlab = "", ylab = "Energy sub metering"))
