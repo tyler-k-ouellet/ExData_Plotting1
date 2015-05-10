@@ -7,7 +7,8 @@ hpc$Time <- strptime(hpc$Time, format = "%H:%M:%S", tz = "GMT")
 
 png(filename = "plot1.png",
     width = 480, 
-    height = 480 
+    height = 480,
+    bg = "transparent" 
 )
 
 hist(hpc$Global_active_power,breaks = 12, 
