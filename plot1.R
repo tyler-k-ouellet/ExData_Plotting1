@@ -4,7 +4,6 @@ hpc <- read.csv("~/Downloads/household_power_consumption.txt", sep=";", na.strin
 hpc$Date <- as.Date(hpc$Date, "%d/%m/%Y")
 hpc <- hpc[hpc$Date <= as.Date("2007-02-02") & hpc$Date >= as.Date("2007-02-01"), ]
 hpc$Time <- strptime(hpc$Time, format = "%H:%M:%S", tz = "GMT")
-hpc$Time <- format(test, "%H:%M:%S")
 
 png(filename = "plot1.png",
     width = 480, 
